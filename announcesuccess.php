@@ -25,10 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				    $imagechecker = $_POST['imagechecker'];
 
 				  
-				    $servername = "localhost";
-				        $username = "Mailinglist";
-				        $password = "MailinG24List";
-					    $databasename = "seminar";
+				    $servername = "***";
+				        $username = "***";
+				        $password = "***";
+					    $databasename = "***";
 					    $conn = mysqli_connect($servername, $username, $password, $databasename);
 					        if (!$conn) {
 							        die("Connection failed: " . mysqli_connect_error());
@@ -48,10 +48,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								        $mail = new PHPMailer;
 									        $mail->CharSet = 'UTF-8';
 									        $mail->isSMTP();
-										        $mail->Host = 'smtp.iitm.ac.in';
+										        $mail->Host = '***';
 										        $mail->SMTPAuth = true;
-											        $mail->Username = 'ebind';
-											        $mail->Password = 'pgSiitmcc';
+											        $mail->Username = '***';
+											        $mail->Password = '***';
 												        $mail->SMTPSecure = 'tls';
 												        $mail->Port = 25;
 													        $mail->From = $email;
