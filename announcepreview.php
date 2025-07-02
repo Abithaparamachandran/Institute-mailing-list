@@ -14,10 +14,10 @@ $z=$_SESSION['usernamee'];
 <?php
 header('Content-Type: text/html; charset=utf-8');
 
-$servername="10.24.0.177";
-$username="abitha";
-$password="abi27%tha";
-$databasename="seminar";
+$servername="****";
+$username="***";
+$password="***";
+$databasename="***";
 $conn=mysqli_connect($servername,$username,$password,$databasename);
 if($conn){
 //	echo"connected";
@@ -26,9 +26,6 @@ else{
 //	echo"not connected";
 }
 
-
-/*$conn = mysqli_connect("10.24.0.177","abitha","abi27%tha");
-mysqli_select_db("seminar",$conn);*/
 
 mysqli_query('SET character_set_results=utf8');
 mysqli_query('SET names=utf8');
@@ -123,10 +120,10 @@ $location = '/var/www/html/seminar/uploadpreview/'.$nam;
 if(move_uploaded_file($tmp_name, $location)){
 //
 }
-$servername="10.24.0.177";
-$username="abitha";
-$password="abi27%tha";
-$databasename="seminar";
+$servername="***";
+$username="***";
+$password="***";
+$databasename="***";
 $conn= mysqli_connect($servername,$username,$password,$databasename);
 if($conn){
 }
