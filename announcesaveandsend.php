@@ -46,10 +46,10 @@ $z=$_SESSION['usernamee'];
 
 <?php
 header('Content-Type: text/html; charset=utf-8');
-$servername="localhost";
-$username="Mailinglist";
-$password="MailinG24List";
-$databasename="seminar";
+$servername="***";
+$username="***";
+$password="***";
+$databasename="***";
 $conn=mysqli_connect($servername,$username,$password,$databasename);
 if($conn){
 	//echo"connected";
@@ -88,11 +88,11 @@ $mail = new PHPMailer;
 
 $mail->CharSet = 'UTF-8';
 $mail->isSMTP();
-$mail->Host = 'smtp2.iitm.ac.in';
+$mail->Host = '***';
 $mail->SMTPAuth = true;
-$mail->Username = 'ebind';
-$mail->Password = 'pgSiitmcc';
-$mail->SMTPSecure = 'tls';
+$mail->Username = '***';
+$mail->Password = '***';
+$mail->SMTPSecure = '***';
 $mail->Port = 25;
 
 $mail->From= $email;
@@ -151,10 +151,10 @@ echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } 
 else {
-	$servername="localhost";
-	$username="Mailinglist";
-	$password="MailinG24List";
-	$databasename="seminar";
+	$servername="***";
+	$username="***";
+	$password="***";
+	$databasename="***";
 	$conn=mysqli_connect($servername,$username,$password,$databasename);
 	if($conn){
 		//echo"connected";
@@ -193,7 +193,7 @@ echo '<div class="alert alert-success">"Thank you! Announce Submitted Successful
 </center>
                         </div>
                         </div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><center><font>Copyright © 2024 All rights reserved | Developed and Maintained by <a style="cursor:point;color:white;" href="http://eservices.iitm.ac.in">Eservices,Computer Centre,IITM</font></center><br>
+
+<center><font>Copyright © 2024 All rights reserved | Developed and Maintained by <a style="cursor:point;color:white;" href="http://eservices.iitm.ac.in">Eservices,Computer Centre,IITM</font></center><br>
                 </section>
 
