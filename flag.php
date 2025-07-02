@@ -1,10 +1,10 @@
 <?php
 require 'PHPMailerAutoload.php';
 
-$servername = "localhost";
-$username = "Mailinglist";
-$password = "MailinG24List";
-$databasename = "seminar";
+$servername = "***";
+$username = "***";
+$password = "***";
+$databasename = "***";
 $conn = mysqli_connect($servername, $username, $password, $databasename);
 
 if (!$conn) {
@@ -15,7 +15,7 @@ $startDate = '2025-06-05 12:00:00';
 
 $endDate = '2025-06-06 11:59:59';
 
-$query = "SELECT * FROM seminarorg WHERE modifiedtimestamp BETWEEN '$startDate' AND '$endDate' AND flag='1' AND type='seminar'";
+$query = "SELECT * FROM *** WHERE modifiedtimestamp BETWEEN '$startDate' AND '$endDate' AND flag='1' AND type='seminar'";
 
 echo "Query: $query<br>";
 
@@ -46,8 +46,8 @@ if (mysqli_num_rows($result) > 0) {
 			            'choffice@iitm.a.c.in',
 				    'abhijit@iitm.ac.in',
 				    'cyoffice@iitm.ac.in',
-									            'edoffice@iitm.ac.in'
-										        ];
+                                    'edoffice@iitm.ac.in'
+];
 
 		    $registrationTime = '2025-06-06 12:00:25';
 
