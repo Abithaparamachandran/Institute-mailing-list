@@ -108,10 +108,10 @@ require 'PHPMailerAutoload.php';
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 $mail->isSMTP();
-$mail->Host = 'smtp.iitm.ac.in';
+$mail->Host = '***';
 $mail->SMTPAuth = true;
-$mail->Username = 'ebind';
-$mail->Password = 'pgSiitmcc';
+$mail->Username = '***';
+$mail->Password = '***';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 25;
 $mail->From = $email;
@@ -126,8 +126,8 @@ if (move_uploaded_file($tmp_name, $location)) {
 }
 $mail->addAttachment($location);
 }
-//$mail->addAddress("seminarlisttest@list.iitm.ac.in");
-$mail->addAddress("announce@list.iitm.ac.in");
+
+$mail->addAddress("***");
 $mail->isHTML(true);
 $mail->Subject = "[" . $e_type . "]" . $e_name;
 if (!empty($welcome)) {
@@ -161,13 +161,13 @@ $mail->Body .= "<br><br><font style='color:#000066; font-weight:bold;'>" . $send
 if (!$mail->send()) {
 echo '<div class="alert alert-danger">Message could not be sent. Mailer Error: ' . $mail->ErrorInfo . '</div>';
 } else {
-$servername = "localhost";
-$username = "Mailinglist";
-$password = "MailinG24List";
+$servername = "***";
+$username = "***";
+$password = "***";
 $databasename = "seminar";
 $conn = mysqli_connect($servername, $username, $password, $databasename);
 if ($conn) {
-$query = "INSERT INTO seminarorg (type, category, welcome, title, date, venue, abstract, sender, email, others, filename, filelocation, modifiedtimestamp, status) VALUES ('$type', '$e_type', '$welcome','$e_nameinsert', '$date', '$venue', '$e_desinsert', '$sender', '$email', '$other', '$nam', '$fullpath', '$timestamp', '$status')";
+$query = "INSERT INTO *** (type, category, welcome, title, date, venue, abstract, sender, email, others, filename, filelocation, modifiedtimestamp, status) VALUES ('$type', '$e_type', '$welcome','$e_nameinsert', '$date', '$venue', '$e_desinsert', '$sender', '$email', '$other', '$nam', '$fullpath', '$timestamp', '$status')";
 $result1 = mysqli_query($conn, $query);
 if ($result1) {
 $lastID = mysqli_insert_id($conn);
