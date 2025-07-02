@@ -13,8 +13,8 @@ if(isset($_SESSION['usernamee'])){
 <?php
 header('Content-Type: text/html; charset=utf-8');
 
-$conn = mysqli_connect("localhost","root","Password1");
-mysqli_select_db("seminar",$conn);
+$conn = mysqli_connect("***","***","***");
+mysqli_select_db("***",$conn);
 
 mysqli_query('SET character_set_results=utf8');
 mysqli_query('SET names=utf8');
@@ -31,7 +31,7 @@ $result = mysqli_query("SET NAMES utf8");//the main trick
 <?php $type=$_GET['type'];  $id=$_GET['id'];?>
 
 <?php
-$result=mysqli_query("select * from seminarorg where type='$type' and id='$id'");
+$result=mysqli_query("select * from *** where type='$type' and id='$id'");
         while ($row2 = mysqli_fetch_assoc($result)) {
 		        $atitle=$row2['title'];
 			        $des=$row2['abstract'];
@@ -150,10 +150,10 @@ background-color:#048f94;
                         
 			<!-- Populate options dynamically using PHP -->
                         <?php
-                        $servername="localhost";
-$username="Mailinglist";
-$password="MailinG24List";
-$dbname="seminar";
+                        $servername="***";
+$username="***";
+$password="***";
+$dbname="***";
  $con=mysqli_connect($servername,$username,$password,$dbname);
 
         if ($con){
@@ -162,7 +162,7 @@ $dbname="seminar";
 									                                            echo "not connect";
 														                                                 }
 
-$list1 = "SELECT * FROM announcetype order by type asc";
+$list1 = "SELECT * FROM *** order by type asc";
 $result=mysqli_query($con,$list1);
         while ($row = mysqli_fetch_assoc($result)) {
 		        $announcetype=$row['type'];     ?>
