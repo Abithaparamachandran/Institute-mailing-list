@@ -13,18 +13,15 @@ h2{
 color:#0b2e33;
 	   }
 .tab {
-          overflow: hidden;
-
-	                                /*background-color: #17a7bd;*/
-	                               background-color:white;
-	                                       padding:10px;
-	                                                 margin-top:-5px;
-	   }
+overflow: hidden;
+background-color:white;
+padding:10px;
+margin-top:-5px;
+}
 </style>
 	<body>
 
 	  <div class="container">
-
 	  <input type="checkbox" id="flip">
 	  <div class="cover">
 	  <div class="front">
@@ -78,10 +75,10 @@ color:#0b2e33;
 ob_start();
 session_start();
 if (isset($_POST['submit'])) {
-$ldapserver = '10.24.0.127';
-$ldapuser = 'cn=Admin,dc=ldap,dc=iitm,dc=ac,dc=in';
-$ldappass = 'YinxxteFWC';
-$ldaptree = 'DC=ldap,DC=iitm,DC=ac,DC=in';
+$ldapserver = '***';
+$ldapuser = '***';
+$ldappass = '***';
+$ldaptree = '***';
 $ldapuname = trim($_POST['username']);
 $ldappwd = trim($_POST['password']);
 $ldapconn = ldap_connect($ldapserver) or die('Could not connect to LDAP server.');
