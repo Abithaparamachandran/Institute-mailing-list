@@ -68,17 +68,17 @@ $filecid="1001";
 $filename = $_FILES["fileToUpload"]["name"];
 if(empty($filename)){ } else {
 $nam="announce".date("d-m-Y H:i");
-$fullpath = '10.24.8.213/seminar/upload/'.$nam;
+$fullpath = '***'.$nam;
 }
 $tmp_name = $_FILES['fileToUpload']['tmp_name'];
 $location = '/var/www/html/seminar/upload/'.$nam;
 if(move_uploaded_file($tmp_name, $location)){
 //$mail->AddEmbeddedImage($location, $filecid, $nam, "base64", "image/jpg");
 }
-$servername="localhost";
-$username="Mailinglist";
-$password="MailinG24List";
-$databasename="seminar";
+$servername="***";
+$username="***";
+$password="***";
+$databasename="***";
 $conn= mysqli_connect($servername,$username,$password,$databasename);
 
 
@@ -93,7 +93,7 @@ mysqli_query('SET collation_connection=utf8_general_ci');
 $result = mysqli_query("SET NAMES utf8");//the main trick
 
 if(empty($id)){
-$query = "INSERT INTO seminarorg (type,category,title,remindermail,abstract,sender,email,others,filename,filelocation,flag)VALUES('$type','$a_type','$atitle','$imagechecker','$desinsert','$sender','$email','$other','$nam','$fullpath','$flag')";
+$query = "INSERT INTO *** (type,category,title,remindermail,abstract,sender,email,others,filename,filelocation,flag)VALUES('$type','$a_type','$atitle','$imagechecker','$desinsert','$sender','$email','$other','$nam','$fullpath','$flag')";
 }
 elseif(!empty($id) && !empty($filename)){
 $query="UPDATE seminarorg SET type='$type', category='$a_type',title='$atitle',remindermail='$imagechecker',abstract='$desinsert',sender='$sender',email='$email',others='$other',filename='$nam',filelocation='$fullpath',flag='$flag' WHERE id='$id'";
