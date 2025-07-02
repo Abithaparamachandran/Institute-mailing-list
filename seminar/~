@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DateTimePicker Example</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!-- Include moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#datetimepicker').datetimepicker({
+        icons: {
+          time: 'fas fa-clock',
+          date: 'fas fa-calendar',
+          up: 'fas fa-arrow-up',
+          down: 'fas fa-arrow-down',
+          previous: 'fas fa-chevron-left',
+          next: 'fas fa-chevron-right',
+          today: 'fas fa-calendar-day',
+          clear: 'fas fa-trash',
+          close: 'fas fa-times'
+        },
+        format: 'MM.DD HH:mm',
+        minDate: moment(),
+        useCurrent: false,
+        stepping: 15,
+        showTodayButton: true,
+      });
+    });
+  </script>
+
+</head>
+<body>
+
+<input type="text" id="datetimepicker">
+
+</body>
+</html>
