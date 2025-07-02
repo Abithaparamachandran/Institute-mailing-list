@@ -88,10 +88,10 @@ require 'PHPMailerAutoload.php';
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 $mail->isSMTP();
-$mail->Host = 'smtp.iitm.ac.in';
+$mail->Host = '***';
 $mail->SMTPAuth = true;
-$mail->Username = 'ebind';
-$mail->Password = 'pgSiitmcc';
+$mail->Username = '***';
+$mail->Password = '***';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 25;
 $mail->From= $email;
@@ -105,7 +105,7 @@ $tmp_name = $_FILES['fileToUpload']['tmp_name'];
 $location = '/var/www/html/seminar/upload/'.$nam;
 if(move_uploaded_file($tmp_name, $location)){
 }
-$mail->addAddress("seminartesting@list.iitm.ac.in");
+$mail->addAddress("***");
 $mail->isHTML(true);
 $mail->Subject ="[".$select."]".$title;
 if(empty($welcome))
@@ -159,9 +159,9 @@ else{
 $mail->Body .= "<font style=color:#000066;font-weight:bold;>Other Information: </font>".$other."<br><br>";
 }
 $mail->Body .= "<br><font style=color:#000066;font-weight:bold;>".$sender."<br>".$department."</font><br><br>";
-$servername="localhost";
-$username="Mailinglist";
-$password="MailinG24List";
+$servername="***";
+$username="***";
+$password="***";
 $databasename="seminar";
 $conn= mysqli_connect($servername,$username,$password,$databasename);
 if($conn){
