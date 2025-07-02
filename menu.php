@@ -26,13 +26,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Arsha
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -40,9 +33,6 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
-	    
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
   <h1 class="logo me-auto"><img src="newlogo.png"alt="logo"width="150%"height="200%"></h1>
       <nav id="navbar" class="navbar">
         <ul>
@@ -50,9 +40,7 @@
      
           <li><a class="nav-link scrollto" href="announce.php"><b>Announce</a></b></li>
           <li><a class="nav-link   scrollto" href="seminar.php"><b>Seminar</a></b></li>
-          <li><a class="nav-link scrollto" href="event.php"><b>Event</a></b></li>
-          
-      
+          <li><a class="nav-link scrollto" href="event.php"><b>Event</a></b></li>      
 <li><a class="nav-link scrollto" href="policynew.php"><b>Policy</b></a></li>
         
         </ul>
@@ -82,13 +70,7 @@
 
   <main id="main">
 
-    
-
-    
-
-    
-
-    <!-- ======= Services Section ======= -->
+        <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
 
@@ -145,18 +127,10 @@
       </div>
     </section><!-- End Services Section -->
 
-   
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
-    
-
-   
-            
-
         </div>
       </div>
     </div>
