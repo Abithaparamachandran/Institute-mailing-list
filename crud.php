@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "Password1";
-$dbname = "seminar";
+$servername = "***";
+$username = "***";
+$password = "***";
+$dbname = "****";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
@@ -19,12 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	    if (isset($_POST['search_date'])) {
 		            $searchDate = $_POST['search_date']; 
 			            
-			            $entrySql = "SELECT * FROM seminarorg1 WHERE DATE(modifiedtimestamp) = '$searchDate' ORDER BY modifiedtimestamp DESC";
+			            $entrySql = "SELECT * FROM *** WHERE DATE(modifiedtimestamp) = '$searchDate' ORDER BY modifiedtimestamp DESC";
 			        }
 	        
 	        elseif (isset($_POST['month_year'])) {
 			        $monthYear = $_POST['month_year']; 
-				        $entrySql = "SELECT * FROM seminarorg1 WHERE DATE_FORMAT(modifiedtimestamp, '%Y-%m') = '$monthYear' ORDER BY modifiedtimestamp DESC";
+				        $entrySql = "SELECT * FROM *** WHERE DATE_FORMAT(modifiedtimestamp, '%Y-%m') = '$monthYear' ORDER BY modifiedtimestamp DESC";
 				    }
 } else {
 	    $entrySql = "SELECT * FROM seminarorg1 WHERE DATE(modifiedtimestamp) = CURDATE() ORDER BY modifiedtimestamp DESC";
