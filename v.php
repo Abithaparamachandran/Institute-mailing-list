@@ -32,14 +32,14 @@ $result = mysqli_query("SET NAMES utf8");//the main trick
 
 <?php
 $result=mysqli_query("select * from seminarorg where type='$type' and id='$id'");
-        while ($row2 = mysqli_fetch_assoc($result)) {
-		        $atitle=$row2['title'];
-			        $des=$row2['abstract'];
-			        $sender=$row2['sender'];
-				        $other=$row2['others'];
-				        $_SESSION['filename']=$row2['filename'];
-					        $_SESSION['filelocation']=$row2['filelocation'];
-					        $_SESSION['imagechecker']=$row2['remindermail'];}
+while ($row2 = mysqli_fetch_assoc($result)) {
+$atitle=$row2['title'];
+$des=$row2['abstract'];
+$sender=$row2['sender'];
+$other=$row2['others'];
+$_SESSION['filename']=$row2['filename'];
+$_SESSION['filelocation']=$row2['filelocation'];
+$_SESSION['imagechecker']=$row2['remindermail'];}
 ?>
 
 
@@ -111,16 +111,16 @@ $result=mysqli_query("select * from seminarorg where type='$type' and id='$id'")
         }
     </script>
 
-    <script>
-        $(document).ready(function () {
-            $("#atypemain").change(function () {
-                $.get('category.php?atypemain=' + $(this).val(), function (data) {
-                    $("#announcecategory").html(data);
-                });
-                return false;
-            });
-        });
-    </script>
+<script>
+$(document).ready(function () {
+$("#atypemain").change(function () {
+$.get('category.php?atypemain=' + $(this).val(), function (data) {
+$("#announcecategory").html(data);
+});
+return false;
+});
+});
+ </script>
 <style>
 body{
 background-color:#048f94;
@@ -149,20 +149,18 @@ background-color:#048f94;
 			<option value="">--Select Announcement Subject--</option>
                         
 			<!-- Populate options dynamically using PHP -->
-                        <?php
-                        $servername="localhost";
-$username="Mailinglist";
-$password="MailinG24List";
+<?php
+$servername="***";
+$username="***";
+$password="***";
 $dbname="seminar";
  $con=mysqli_connect($servername,$username,$password,$dbname);
-
-        if ($con){
-		                              echo "connected";
-					                              }else{
-									                                            echo "not connect";
-														                                                 }
-
-$list1 = "SELECT * FROM announcetype order by type asc";
+if ($con){
+echo "connected";
+}else{
+echo "not connect";
+}
+$list1 = "SELECT * FROM *** order by type asc";
 $result=mysqli_query($con,$list1);
         while ($row = mysqli_fetch_assoc($result)) {
 		        $announcetype=$row['type'];     ?>
