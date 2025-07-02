@@ -122,57 +122,48 @@ background-color:#048f94;
 <textarea name="abstract"class="form-control"placeholder="Enter Seminar Abstract"></textarea>
 </div>
 
-
-
-                <div class="mb-3">
-                    <label for="fileToUpload" class="form-label"><b>Upload Image (File Type: jpeg, jpg, Maximum File Size: 100KB)</b></label>
-                    <input type="file" name="fileToUpload" id="fileToUpload" onchange="ValidateSize(this)" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="sender" class="form-label"><b>Sender's Name </b><b style="font-size:20px;">*</b></label>
-                    <input type="text" name="sender" id="sender" required class="form-control" placeholder="Enter Sender's Name" value="">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label"><b>Email Address</b> <b style="font-size:20px;">*</b></label>
-                    <input type="text" name="email" id="email" value="" required class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="other" class="form-label"><b>Additional Information</b></label>
-                    <input type="text" name="other" id="other" class="form-control" placeholder="Enter Additional Information">
-		</div>
+<div class="mb-3">
+<label for="fileToUpload" class="form-label"><b>Upload Image (File Type: jpeg, jpg, Maximum File Size: 100KB)</b></label>
+<input type="file" name="fileToUpload" id="fileToUpload" onchange="ValidateSize(this)" class="form-control">
+</div>
+<div class="mb-3">
+<label for="sender" class="form-label"><b>Sender's Name </b><b style="font-size:20px;">*</b></label>
+<input type="text" name="sender" id="sender" required class="form-control" placeholder="Enter Sender's Name" value="">
+</div>
+<div class="mb-3">
+<label for="email" class="form-label"><b>Email Address</b> <b style="font-size:20px;">*</b></label>
+<input type="text" name="email" id="email" value="" required class="form-control">
+</div>
+<div class="mb-3">
+             <label for="other" class="form-label"><b>Additional Information</b></label>
+<input type="text" name="other" id="other" class="form-control" placeholder="Enter Additional Information">
+</div>
 <div class="mb-3">
 <label for="link"class="form-label"><b>Enter the Web Conference Link</label>
 <input type="text"name="link"id="link"class="form-control"placeholder="Mention the web conferncing link either zoom or hangout or mention the meeting link where the seminars will happen"></div>
-
  <div class="alert alert-info">
-                            <p>Note: Kindly provide an attractive image that will be posted on the IITM website. Your posting will be sent to all subscribers of the announcement list.</p>
-                        </div>
-                <div class="text-center">
-                    <button class="btn btn-primary" name="submit" formaction="seminarsuccess.php?type=<?php echo $type; ?>"><i class="fa fa-paper-plane" aria-hidden="true"></i><b> Post Seminar</b></button>
-                   
-                </div>
-            </form>
-        </div>
-    </div>
+<p>Note: Kindly provide an attractive image that will be posted on the IITM website. Your posting will be sent to all subscribers of the announcement list.</p>
+</div>
+<div class="text-center">
+<button class="btn btn-primary" name="submit" formaction="seminarsuccess.php?type=<?php echo $type; ?>"><i class="fa fa-paper-plane" aria-hidden="true"></i><b> Post Seminar</b></button>
+</div>
+</form>
 </div>
 </div>
 </div>
-
-
+</div>
+</div>
 <script>
 function ValidateSize(file) {
-	        var FileSize = file.files[0].size / 1024;// in MB
-		        if (FileSize > 100) {
-				            alert('Maximum file size is 100 KB');
-					               file.value = "";
-					            } else {
-							            }
-		  if ( /\.(jpe?g)$/i.test(file.files[0].name) === false ) { alert("Accepted file types are jpg,jpeg!");file.value=""; }
-
-		    }
+var FileSize = file.files[0].size / 1024;// in MB
+if (FileSize > 100) {
+alert('Maximum file size is 100 KB');
+file.value = "";
+} else {
+}
+if ( /\.(jpe?g)$/i.test(file.files[0].name) === false ) { alert("Accepted file types are jpg,jpeg!");file.value=""; }
+}
 </script>
-
-
 <script>
 $(document).ready(function () {
 	$('#register-form').validate({ // initialize the plugin
@@ -200,7 +191,5 @@ $(document).ready(function () {
 });
 });
 </script>
-
-
 </body>
 </html>
