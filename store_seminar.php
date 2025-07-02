@@ -53,68 +53,61 @@ document.addEventListener('DOMContentLoaded', function() {
 	<div>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	    $type = "seminar";
-	        $select = $_POST['select'];
-	        $titleinsert = addslashes($_POST['title']);
-		    $welcome = $_POST['welcome'];
-		    $date = $_POST['date'];
-		        $timestamp = date('Y-m-d', strtotime($date));
-		        $venue = $_POST['venue'];
-			    $speaker = $_POST['speaker'];
-			    $biographyinsert = addslashes($_POST['biography']);
-			        $affiliationinsert = addslashes($_POST['affiliation']);
-			        $abstractinsert = addslashes($_POST['abstract']);
-				    $sender = $_POST['sender'];
-				    $department = $_POST['department'];
-				        $other = $_POST['other'];
-				        $email = $_POST['email'];
-					    $remindermail = $_POST['remindermail'];
-					    $link = $_POST['link'];
-					        $mtimestamp = date('Y-m-d H:i:s');
-					        $status = "Active";
-
-						    $servername = "localhost";
-						    $username = "Mailinglist";
-						        $password = "MailinG24List";
-						        $databasename = "seminar";
-							    $conn = mysqli_connect($servername, $username, $password, $databasename);
-
-							    if (!$conn) {
-								            die("Connection failed: " . mysqli_connect_error());
-									        }
-
-							        $linkinsert = $other . "-web conference link" . $link;
-							        $query = "INSERT IGNORE INTO seminarorg1 (type, category, welcome, title, speaker, biography, affiliation, department, date, reminder_date, remindermail, venue, abstract, sender, email, others, filename, filelocation, flag, modifiedtimestamp, status) VALUES ('$type', '$select', 'NULL', '$titleinsert', '$speaker', '$biographyinsert', '$affiliationinsert', '$department', '$date', '$timestamp', '$remindermail', '$venue', '$abstractinsert', '$sender', '$email', '$linkinsert', NULL, NULL, '0', '$mtimestamp', '$status')";
-
-								    if (mysqli_query($conn, $query)) {
-									            $_SESSION['success_message'] = '<div style="color:green;font-weight: bold;border: 2px solid green;padding: 10px;background-color:lightgreen">Thank you! Seminar Submitted Successfully...Your seminar will be moderate at 12.00pm</div>';
-										        } else {
-												        $_SESSION['error_message'] = '<div style="color:red;font-weight: bold;border: 2px solid red;padding: 10px;background-color:pink">Error: ' . mysqli_error($conn) . '</div>';
-													    }
-
-								    mysqli_close($conn);
-								    header("Location: " . $_SERVER['PHP_SELF']);
-								        exit();
+$type = "seminar";
+$select = $_POST['select'];
+$titleinsert = addslashes($_POST['title']);
+$welcome = $_POST['welcome'];
+$date = $_POST['date'];
+$timestamp = date('Y-m-d', strtotime($date));
+$venue = $_POST['venue'];
+$speaker = $_POST['speaker'];
+$biographyinsert = addslashes($_POST['biography']);
+$affiliationinsert = addslashes($_POST['affiliation']);
+$abstractinsert = addslashes($_POST['abstract']);
+$sender = $_POST['sender'];
+$department = $_POST['department'];
+$other = $_POST['other'];
+$email = $_POST['email'];
+$remindermail = $_POST['remindermail'];
+$link = $_POST['link'];
+$date = date('Y-m-d H:i:s');
+$status = "Active";
+$servername = "***";
+$username = "***";
+$password = "***";
+$databasename = "seminar";
+$conn = mysqli_connect($servername, $username, $password, $databasename);
+if (!$conn) {
+die("Connection failed: " . mysqli_connect_error());
+}
+$linkinsert = $other . "-web conference link" . $link;
+$query = "INSERT IGNORE INTO *** (type, category, welcome, title, speaker, biography, affiliation, department, date, reminder_date, remindermail, venue, abstract, sender, email, others, filename, filelocation, flag, modifiedtimestamp, status) VALUES ('$type', '$select', 'NULL', '$titleinsert', '$speaker', '$biographyinsert', '$affiliationinsert', '$department', '$date', '$timestamp', '$remindermail', '$venue', '$abstractinsert', '$sender', '$email', '$linkinsert', NULL, NULL, '0', '$mtimestamp', '$status')";
+if (mysqli_query($conn, $query)) {
+$_SESSION['success_message'] = '<div style="color:green;font-weight: bold;border: 2px solid green;padding: 10px;background-color:lightgreen">Thank you! Seminar Submitted Successfully...Your seminar will be moderate at 12.00pm</div>';
+} else {
+$_SESSION['error_message'] = '<div style="color:red;font-weight: bold;border: 2px solid red;padding: 10px;background-color:pink">Error: ' . mysqli_error($conn) . '</div>';
+}
+mysqli_close($conn);
+header("Location: " . $_SERVER['PHP_SELF']);
+exit();
 }
 ?>
-
 <?php
 if (isset($_SESSION['success_message'])) {
 	    echo $_SESSION['success_message'];
 	        unset($_SESSION['success_message']);
 }
-
 if (isset($_SESSION['error_message'])) {
-	    echo $_SESSION['error_message'];
-	        unset($_SESSION['error_message']);
+echo $_SESSION['error_message'];
+unset($_SESSION['error_message']);
 }
 ?>
 </div>
 </form>
 </center>
-                        </div>
-                        </div>
 </div>
-                </section>
+</div>
+</div>
+</section>
 </body>
 </html>
