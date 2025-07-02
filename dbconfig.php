@@ -1,11 +1,10 @@
 <?php
 
-$servername = "localhost";
+$servername = "***";
 
-$username = "root";
-
-$password = "Password1";
-$dbname = "seminar";
+$username = "***";
+$password = "***";
+$dbname = "***";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
