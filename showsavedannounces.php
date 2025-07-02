@@ -53,10 +53,10 @@ background-color:white;
 
 <?php
 header('Content-Type: text/html; charset=utf-8');
-$servername="localhost";
-$username="Mailinglist";
-$password="MailinG24List";
-$databasename="seminar";
+$servername="***";
+$username="***";
+$password="***";
+$databasename="***";
 $conn=mysqli_connect($servername,$username,$password,$databasename);
 
 
@@ -69,7 +69,7 @@ mysqli_query('SET collation_connection=utf8_general_ci');
 
 $result = mysqli_query("SET NAMES utf8");//the main trick
 
-$result="select * from seminarorg where type='$type' and email='$useremail' and flag='1'";
+$result="select * from *** where type='$type' and email='$useremail' and flag='1'";
 $result1=mysqli_query($conn,$result);
 
 
@@ -114,9 +114,6 @@ if(empty($_SESSION['filelocation'])) { } else { ?>
 <img src="<?php echo $_SESSION['filelocation']; ?>" style="width:40%;height:auto;"><br> <?php }} ?>
 
 <button class="btn btn-default submit" name="announceedit" formaction="v.php?type=<?php echo $type;?>&id=<?php echo $_SESSION['id']; ?>" style="background:#0088cc;">Edit Announce</button>
-
-<!--<button class="btn btn-default submit" name="announcedelete" formaction="announcedelete.php?type=<?php echo $type;?>&id=<?php echo $_SESSION['id']; ?>&useremail=<?php echo $useremail;?>" style="background:#0088cc;">Delete Announce</button>-->
-
 <?php  echo "<a class='btn btn-default submit' style='background:#0088cc !important;' onclick='javascript:confirmationDelete($(this));return false;' href='announcedelete.php?type=".$type."&useremail=".$useremail."&id=".$_SESSION['id']."'>Delete Announce</a>";
 ?>
 
