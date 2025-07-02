@@ -1,9 +1,9 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-$servername = "localhost";
-$username = "Mailinglist";
-$password = "MailinG24List";
-$databasename = "seminar";
+$servername = "***";
+$username = "***";
+$password = "***";
+$databasename = "***";
 $conn = mysqli_connect($servername, $username, $password, $databasename);
 if (!$conn) {
 	    die("Connection failed: " . mysqli_connect_error());
