@@ -1,9 +1,9 @@
 <?php
 require 'PHPMailerAutoload.php';
 
-$servername = "localhost";
-$username = "Mailinglist";
-$password = "MailinG24List";
+$servername = "***";
+$username = "***";
+$password = "***";
 $databasename = "seminar";
 $conn = mysqli_connect($servername, $username, $password, $databasename);
 
@@ -30,10 +30,10 @@ if (mysqli_num_rows($result) > 0) {
 	    $mail = new PHPMailer;
 	        $mail->CharSet = 'UTF-8';
 	        $mail->isSMTP();
-		    $mail->Host = 'smtp.iitm.ac.in';
+		    $mail->Host = '***';
 		    $mail->SMTPAuth = true;
-		        $mail->Username = 'ebind';
-		        $mail->Password = 'pgSiitmcc';
+		        $mail->Username = '***';
+		        $mail->Password = '***';
 			    $mail->SMTPSecure = 'tls';
 			    $mail->Port = 25;
 			        
@@ -69,40 +69,40 @@ if (mysqli_num_rows($result) > 0) {
     $body .= "</div>";
     return $body;
 						    }
-						    <script>
+<script>
 function toggleAbstract(id) {
-	    var el = document.getElementById(id);
-	        if (el.style.display === "none") {
-			        el.style.display = "block";
-				    } else {
-					            el.style.display = "none";
-						        }
+var el = document.getElementById(id);
+if (el.style.display === "none") {
+el.style.display = "block";
+} else {
+el.style.display = "none";
+}
 }
 </script>
 
 
 <script>
-					        document.addEventListener('DOMContentLoaded', function() {
-							            const seminarLinks = document.querySelectorAll('a[href^=\"#seminar_\"]');
-								                seminarLinks.forEach(link => {
-										                link.addEventListener('click', function(e) {
-													                    e.preventDefault();
-															                        const targetId = link.getAttribute('href').substring(1); // Get the target seminar ID
-															                        const seminarDetailDiv = document.getElementById(targetId);
-																		                    
-                    if (seminarDetailDiv.style.display === 'none' || seminarDetailDiv.style.display === '') {
-                        seminarDetailDiv.style.display = 'block';
-                    } else {
-                        seminarDetailDiv.style.display = 'none';
-                    }
-                });
-            });
+document.addEventListener('DOMContentLoaded', function() {
+const seminarLinks = document.querySelectorAll('a[href^=\"#seminar_\"]');
+seminarLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = link.getAttribute('href').substring(1); // Get the target seminar ID
+const seminarDetailDiv = document.getElementById(targetId);
+
+if (seminarDetailDiv.style.display === 'none' || seminarDetailDiv.style.display === '') {
+seminarDetailDiv.style.display = 'block';
+} else {
+seminarDetailDiv.style.display = 'none';
+}
+});
+});
         });
     </script>";
 
-    $mail->From = 'seminartesting@list.iitm.ac.in';
+    $mail->From = '***';
     $mail->FromName = 'Seminars';
-    $mail->addAddress("seminartesting@list.iitm.ac.in");
+    $mail->addAddress("***");
     $mail->isHTML(true);
     $mail->Subject = "Seminar Announcement";
     $mail->Body = $emailBody;
