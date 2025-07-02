@@ -6,10 +6,10 @@ if($name=="Announcement" || $name=="Awards" || $name=="Closure" || $name=="Gener
 <label>Please Select the Specific Subject<b>*</b></label>
 <select name="atype" id="atype" class="form-control">
 <?php
-	$servername="localhost";
-$username="root";
-$password="Password1";
-$dbname="seminar";
+$servername="***";
+$username="***";
+$password="***";
+$dbname="***";
 
 $con=mysqli_connect($servername,$username,$password,$dbname);
 if($con){
